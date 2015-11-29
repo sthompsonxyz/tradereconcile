@@ -23,7 +23,7 @@ sub parse_trade_file {
 
         my $client_trade_line = TradeLine->new();
 
-        # todo: error/format checking per line
+        # todo: error/format checking per line (type checking caught by moose)
         $client_trade_line->client( $trade_line_fields[0] );
         $client_trade_line->trade_or_return( $trade_line_fields[1] );
         $client_trade_line->client_reference( $trade_line_fields[2] );
@@ -43,7 +43,7 @@ sub parse_trade_file {
 
 
 
-    
+    return 0;    
 }
 
 __PACKAGE__->meta->make_immutable;
