@@ -33,9 +33,6 @@ has unmatched_returns => (
     default => sub { { client1 => [], client2 => [] } }
 );
 
-has matched_return_securities =>
-    ( is => 'rw', isa => 'ArrayRef', default => sub { [] } );
-
 sub trade_match {
     my ($self) = @_;
 
