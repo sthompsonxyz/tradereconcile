@@ -1,4 +1,4 @@
-# trade_reconciliation
+# trade reconciliation
 
 run with:
 perl reconcile_report.pl
