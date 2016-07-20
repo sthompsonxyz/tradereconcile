@@ -12,7 +12,7 @@ my $test_set = ClientTradeSet->new();
 isa_ok( $test_set, 'ClientTradeSet' );
 
 $test_set->trades_file( new IO::File );
-$test_set->trades_file->open("< ./client1_trades.tsv")
+$test_set->trades_file->open("< ./t/data/client1_trades.tsv")
     || die "could not open client 1's trade file: $!";
 is($test_set->parse_trade_file, 0, "parsed file OK");
 

@@ -12,14 +12,14 @@ isa_ok($test_report, 'ReconciliationReport');
 
 my $client1_trade_set = ClientTradeSet->new();
 $client1_trade_set->trades_file( new IO::File );
-$client1_trade_set->trades_file->open("< ./client1_trades.tsv")
+$client1_trade_set->trades_file->open("< ./t/data/client1_trades.tsv")
     || die "could not open client 1's trade file: $!";
 is($client1_trade_set->parse_trade_file, 0, "Parses first OK");
 
 # client 2
 my $client2_trade_set = ClientTradeSet->new();
 $client2_trade_set->trades_file( new IO::File );
-$client2_trade_set->trades_file->open("< ./client2_trades.tsv")
+$client2_trade_set->trades_file->open("< ./t/data/client2_trades.tsv")
     || die "could not open client 2's trade file: $!";
 is($client2_trade_set->parse_trade_file, 0, "Parses second OK");
 
